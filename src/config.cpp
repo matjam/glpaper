@@ -26,9 +26,10 @@ Config::~Config() {}
 
 void Config::reload()
 {
-  std::list search_paths = {
-      std::getenv("XDG_CONFIG_HOME") + "/glpaper/glpaper.toml",
-      std::getenv("XDG_CONFIG_HOME") + "/glpaper.toml",
+  std::string xdg_config_home = std::getenv("XDG_CONFIG_HOME");
+  std::list<std::string> search_paths = {
+      xdg_config_home.append("/glpaper/glpaper.toml"),
+      xdg_config_home.append("/glpaper.toml"),
       "~/.config/glpaper/glpaper.toml",
       "~/.config/glpaper.toml",
       "/etc/xdg/glpaper.toml",

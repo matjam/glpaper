@@ -113,7 +113,7 @@ jobs:
       if: matrix.os == 'ubuntu-22.04'
       run: >-
         sudo apt-get install clang-tidy-14 cppcheck -y -q
-
+        sudo apt-get install libx11-dev libxrandr-dev libxcursor-dev libxi-dev libudev-dev libgl1-mesa-dev
         sudo update-alternatives --install
         /usr/bin/clang-tidy clang-tidy
         /usr/bin/clang-tidy-14 140

@@ -23,6 +23,5 @@ if(ENABLE_COVERAGE)
 endif()
 
 include(cmake/lint-targets.cmake)
-include(cmake/spell-targets.cmake)
 
 add_folders(Project)
