@@ -1,0 +1,24 @@
+# glpaper configuration file
+
+# path your wallpapers are stored in
+wallpapers = "/data/Wallpapers"
+
+# whether the files should be shuffled or not. If you do not shuffle, the files will be 
+# displayed in the order they are found which is dependent on the filesystem.
+shuffle = true
+
+# the mode to scale the images. Options are "vertical", "horizontal" and "stretched".
+scale_mode = "vertical"
+
+# the speed at which the images fade in and out, in seconds. This may be fractional.
+fade_speed = 1.0
+
+# the delay between images, in seconds. Must be an integer.
+delay = 300
+
+# SFML's window redraw framerate limit. This is the maximum number of frames per second 
+# the window will redraw at. Higher numbers will be smoother, but will use more CPU.
+framerate_limit = 60
+
+# whether to display debug information or not.
+debug = false
