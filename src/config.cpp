@@ -26,7 +26,14 @@ Config::~Config() {}
 
 void Config::reload()
 {
-  std::string xdg_config_home = std::getenv("XDG_CONFIG_HOME");
+  std::string xdg_config_home;
+
+  if (std::getenv("XDG_CONFIG_HOME") == nullptr) {
+    xdg_config_home = std::string(std::getenv("HOME")) + "/.config";
+  } else {
+    xdg_config_home = std::getenv("XDG_CONFIG_HOME");
+  }
+
   std::list<std::string> search_paths = {
       xdg_config_home.append("/glpaper/glpaper.toml"),
       xdg_config_home.append("/glpaper.toml"),
